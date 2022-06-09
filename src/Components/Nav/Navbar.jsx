@@ -14,6 +14,10 @@ function Navbar() {
     height:3rem;
     margin-bottom:1rem;
 
+    @media screen and (max-width:760px){
+      justify-content: space-between;
+    }
+
   `
   return (
     <div>

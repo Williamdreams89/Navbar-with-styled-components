@@ -15,6 +15,7 @@ function Burger() {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    z-index: 2;
 
     div {
       width: 2rem;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 
 
-function RightNav() {
+function RightNav({showMenu}) {
     const Ul = styled.ul`
     display:flex;
     width: 60vw;
@@ -19,20 +19,20 @@ function RightNav() {
         background-color: #333;
         height: 100vh;
         width:70vw;
-        transform: ${({showMenu}) => showMenu ? "translateX(0)" : "translate(100%)"}
+        // transform: ${({showMenu}) => showMenu ? "translateX(0)" : "translate(100%)"};
+        display: ${({showMenu})=> showMenu ? "":"none"};
+        transition: transform .3s ease-in-out;
     }
     `
   return (
-    <div showMenu = {showMenu}>
-        <Ul showMenu = {showMenu}>
+        <Ul showMenu={showMenu}>
           <li>Home</li>
           <li>AboutMe</li>
           <li>Portfolio</li>
           <li>Blog</li>
           <li>Contact</li>
         </Ul>
-    </div>
-  )
+   )
 }
 
 export default RightNav
